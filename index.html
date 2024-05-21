@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="/assets/styles/config.css">
+  <link rel="stylesheet" href="/assets/styles/general.css">
+  <title>Frontend Mentor | Calculator app</title>
+</head>
+<body>
+  <main>
+    <div>
+
+    </div>
+    <span id="screen"></span>
+    <div id="keyboard">
+      <button id="buttonDelete" onclick="buttonDelete(screen)">DEL</button>
+      <button id="buttonReset" onclick="buttonReset()">RESET</button>
+      <button id="buttonZero" onclick="TheNumber('0')">0</button>
+      <button id="buttonOne" onclick="TheNumber('1')">1</button>
+      <button id="buttonTwo" onclick="TheNumber('2')">2</button>
+      <button id="buttonThree" onclick="TheNumber('3')">3</button>
+      <button id="buttonFour" onclick="TheNumber('4')">4</button>
+      <button id="buttonFive" onclick="TheNumber('5')">5</button>
+      <button id="buttonSix" onclick="TheNumber('6')">6</button>
+      <button id="buttonSeven" onclick="TheNumber('7')">7</button>
+      <button id="buttonEight" onclick="TheNumber('8')">8</button>
+      <button id="buttonNine" onclick="TheNumber('9')">9</button>
+      <button id="buttonDot" onclick="TheNumber('.')">.</button>
+      <button id="buttonPlus" onclick="TheOperator('+')">+</button>
+      <button id="buttonMinus" onclick="TheOperator('-')">-</button>
+      <button id="buttonMultiplied" onclick="TheOperator('*')">x</button>
+      <button id="buttonDivided" onclick="TheOperator('/')">/</button>
+      <button id="buttonExecute" onclick="buttonExecute()">=</button>
+    </div>
+  </main>  
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </footer>
+  <script src="assets/scripts/calculator.js"></script>
+  <script src="assets/scripts/mouse.js"></script>
+  <script src="assets/scripts/keyboard.js"></script>
+</body>
+</html>
