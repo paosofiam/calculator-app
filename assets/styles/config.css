@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+:root{
+    /*Devices*/
+    --minDeviceWidth: 320px;
+    --mobileWidth: 375px;
+    --desktopWidth: 1440px;
+    /*Typography*/
+    --FF: "League Spartan", sans-serif;
+    --FS: 32px;
+    --FW: 700;
+    /*All colors*/
+        /*Theme 1*/
+            /*Backgrounds*/
+    --vDarkDesBlue1: hsl(222, 26%, 31%);
+    --vDarkDesBlue2: hsl(223, 31%, 20%);
+    --vDarkDesBlue3: hsl(224, 36%, 15%);
+            /*Keys*/
+    --darkDesBlue1: hsl(225, 21%, 49%);
+    --darkDesBlue2: hsl(224, 28%, 35%);
+    --red1: hsl(6, 63%, 50%);
+    --red2: hsl(6, 70%, 34%);
+    --greyOrange1: hsl(30, 25%, 89%);
+    --greyOrange2: hsl(28, 16%, 65%);
+            /*Text*/
+    --greyBlue: hsl(221, 14%, 31%);
+    --white: hsl(0, 0%, 100%);
+        /*Theme 2*/
+            /*Backgrounds*/
+    --lightGrey1: hsl(0, 0%, 90%);
+    --lightGrey2: hsl(0, 5%, 81%);
+    --lightGrey3: hsl(0, 0%, 93%);
+            /*Keys*/
+    --darkCyan1: hsl(185, 42%, 37%);
+    --darkCyan2: hsl(185, 58%, 25%);
+    --orange1: hsl(25, 98%, 40%);
+    --orange2: hsl(25, 99%, 27%);
+    --greyYellow1: hsl(45, 7%, 89%);
+    --greyYellow2: hsl(35, 11%, 61%);
+            /*Text*/
+    --dGreyYellow: hsl(60, 10%, 19%);
+        /*Theme 3*/
+            /*Backgrounds*/
+    --vDarkViolet1: hsl(268, 75%, 9%);
+    --vDarkViolet2: hsl(268, 71%, 12%);/*toggle background, keypad background, screen background*/
+            /*Keys*/
+    --violet1: hsl(281, 89%, 26%);
+    --violet2: hsl(285, 91%, 52%);
+    --cyan1: hsl(176, 100%, 44%);
+    --cyan2: hsl(177, 92%, 70%);
+    --darkViolet1: hsl(268, 47%, 21%);
+    --darkViolet2: hsl(290, 70%, 36%);
+            /*Text*/
+    --yellow: hsl(52, 100%, 62%);
+    --vDarkBlue: hsl(198, 20%, 13%);
+        /*Dimensions*/
+    --shadowLength: 3px;
+    --keyRadius: 5px;
+    --gapSize: 20px;
+    --calcRadius: 10px;
+}
+    /*Color Themes*/
+:root{/*Template & Theme 1*/
+    /*Backgrounds*/
+    --mainB: var(--vDarkDesBlue1);
+    --toggleB: var(--vDarkDesBlue2);
+    --keypadB: var(--vDarkDesBlue2);
+    --screenB: var(--vDarkDesBlue3);
+    /*Keys*/
+    --keyB1: var(--darkDesBlue1);
+    --keySh1: var(--darkDesBlue2);
+    --keyB2: var(--red1);
+    --toggle: var(--red1);
+    --keySh2: var(--red2);
+    --keyB3: var(--greyOrange1);
+    --keySh3: var(--greyOrange2);
+    /*Text*/
+    --Text1: var(--greyBlue);
+    --Text2: var(--white);
+    --Text3: var(--white);
+}
+.theme-2{/*Theme 2*/
+    /*Backgrounds*/
+    --mainB: var(--lightGrey1);
+    --toggleB: var(--lightGrey2);
+    --keypadB: var(--lightGrey2);
+    --screenB: var(--lightGrey3);
+    /*Keys*/
+    --keyB1: var(--darkCyan1);
+    --keySh1: var(--darkCyan2);
+    --keyB2: var(--orange1);
+    --toggle: var(--orange1);
+    --keySh2: var(--orange2);
+    --keyB3: var(--greyYellow1);
+    --keySh3: var(--greyYellow2);
+    /*Text*/
+    --Text1: var(--dGreyYellow);
+    --Text2: var(--white);
+    --Text3: var(--white);
+}
+.theme-3{/*Theme 3*/
+    /*Backgrounds*/
+    --mainB: var(--vDarkViolet1);
+    --toggleB: var(--vDarkViolet2);
+    --keypadB: var(--vDarkViolet2);
+    --screenB: var(--vDarkViolet2);
+    /*Keys*/
+    --keyB1: var(--violet1);
+    --keySh1: var(--violet2);
+    --keyB2: var(--cyan1);
+    --toggle: var(--cyan1);
+    --keySh2: var(--cyan2);
+    --keyB3: var(--darkViolet1);
+    --keySh3: var(--darkViolet2);
+    /*Text*/
+    --Text1: var(--yellow);
+    --Text2: var(--vDarkBlue);
+    --Text3: var(--white);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+main{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#calculator{
+    height: 80%;
+    width: 30%;
+}
+
+button{
+    font-family: var(--FF);
+    font-size: var(--FS);
+    font-weight: var(--FW);
+    text-align: center;
+}

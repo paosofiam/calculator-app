@@ -9,30 +9,44 @@
   <link rel="stylesheet" href="/assets/styles/general.css">
   <title>Frontend Mentor | Calculator app</title>
 </head>
-<body>
-  <main>
+<body id="calcApp" class="">
+  <main id="calculator">
     <div>
-
+      <h1>calc</h1>
+      <label for="themeSwitch" onclick="selectTheme()">
+        <span>THEME</span>
+        <div>
+          <span>1</span>
+          <span>2</span>
+          <span>3
+          </span>
+        </div>
+        <div>
+          <input type="radio" name="themeSwitch" id="themeSelect1" value="1" checked>
+          <input type="radio" name="themeSwitch" id="themeSelect2" value="2">
+          <input type="radio" name="themeSwitch" id="themeSelect3" value="3">
+        </div>
+      </label>
     </div>
     <span id="screen"></span>
     <div id="keyboard">
-      <button id="buttonDelete" onclick="buttonDelete(screen)">DEL</button>
-      <button id="buttonReset" onclick="buttonReset()">RESET</button>
-      <button id="buttonZero" onclick="TheNumber('0')">0</button>
-      <button id="buttonOne" onclick="TheNumber('1')">1</button>
-      <button id="buttonTwo" onclick="TheNumber('2')">2</button>
-      <button id="buttonThree" onclick="TheNumber('3')">3</button>
-      <button id="buttonFour" onclick="TheNumber('4')">4</button>
-      <button id="buttonFive" onclick="TheNumber('5')">5</button>
-      <button id="buttonSix" onclick="TheNumber('6')">6</button>
-      <button id="buttonSeven" onclick="TheNumber('7')">7</button>
-      <button id="buttonEight" onclick="TheNumber('8')">8</button>
-      <button id="buttonNine" onclick="TheNumber('9')">9</button>
-      <button id="buttonDot" onclick="TheNumber('.')">.</button>
-      <button id="buttonPlus" onclick="TheOperator('+')">+</button>
-      <button id="buttonMinus" onclick="TheOperator('-')">-</button>
-      <button id="buttonMultiplied" onclick="TheOperator('*')">x</button>
-      <button id="buttonDivided" onclick="TheOperator('/')">/</button>
+      <button id="buttonZero" class="numButton row4 column2" onclick="TheNumber('0')">0</button>
+      <button id="buttonOne" class="numButton row3 column1" onclick="TheNumber('1')">1</button>
+      <button id="buttonTwo" class="numButton row3 column2" onclick="TheNumber('2')">2</button>
+      <button id="buttonThree" class="numButton row3 column3" onclick="TheNumber('3')">3</button>
+      <button id="buttonFour" class="numButton row2 column1" onclick="TheNumber('4')">4</button>
+      <button id="buttonFive" class="numButton row2 column2" onclick="TheNumber('5')">5</button>
+      <button id="buttonSix" class="numButton row2 column3" onclick="TheNumber('6')">6</button>
+      <button id="buttonSeven" class="numButton row1 column1" onclick="TheNumber('7')">7</button>
+      <button id="buttonEight" class="numButton row1 column2" onclick="TheNumber('8')">8</button>
+      <button id="buttonNine" class="numButton row1 column3" onclick="TheNumber('9')">9</button>
+      <button id="buttonDot" class="numButton row4" onclick="TheNumber('.')">.</button>
+      <button id="buttonPlus" class="numButton column4" onclick="TheOperator('+')">+</button>
+      <button id="buttonMinus" class="numButton column4" onclick="TheOperator('-')">-</button>
+      <button id="buttonMultiplied" class="numButton column4" onclick="TheOperator('*')">x</button>
+      <button id="buttonDivided" class="numButton row4" onclick="TheOperator('/')">/</button>
+      <button id="buttonDelete" class="commandButton" onclick="buttonDelete(screen)">DEL</button>
+      <button id="buttonReset" class="commandButton" onclick="buttonReset()">RESET</button>
       <button id="buttonExecute" onclick="buttonExecute()">=</button>
     </div>
   </main>  
@@ -43,5 +57,6 @@
   <script src="assets/scripts/calculator.js"></script>
   <script src="assets/scripts/mouse.js"></script>
   <script src="assets/scripts/keyboard.js"></script>
+  <script src="assets/scripts/themes.js"></script>
 </body>
 </html>
