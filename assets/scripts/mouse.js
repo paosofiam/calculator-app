@@ -1,14 +1,10 @@
 /*When a Number button is pressed*/
 function TheNumber(key){
-    if(error){
-        reset();
-        error = false;
-        printScreen();
-    }
-    else if (executed && operator == ''){
+    if(error || (executed && operator == '')){
         buttonReset();
     }
     addChar(key);
+    justExecuted = false;
     screen += key;
     printScreen();
 }
@@ -65,24 +61,30 @@ function buttonExecute(){
         }
         operator = '';
         executed = true;
+        justExecuted = true;
         printScreen();
     }
 }
 /*Deletes one character*/
 function buttonDelete(){
-    if (answer != '' && operator == '' && number == '' && !executed){
-        answer = answer.slice(0, -1);
-        screen = screen.slice(0, -1);  
+    if(justExecuted){
+        buttonReset();
     }
-    else if (answer != '' && operator != '' && number == ''){
-        operator = '';
-        screen = screen.slice(0, -1);
+    else{
+        if (answer != '' && operator == '' && number == '' && !executed){
+            answer = answer.slice(0, -1);
+            screen = screen.slice(0, -1);  
+        }
+        else if (answer != '' && operator != '' && number == ''){
+            operator = '';
+            screen = screen.slice(0, -1);
+        }
+        else if (answer != '' && operator != '' && number != ''){
+            number = number.slice(0, -1);
+            screen = screen.slice(0, -1);
+        }
+        printScreen();
     }
-    else if (answer != '' && operator != '' && number != ''){
-        number = number.slice(0, -1);
-        screen = screen.slice(0, -1);
-    }
-    printScreen();
 }
 /*Resets the whole system w/o reloading the page*/
 function buttonReset(){

@@ -4,6 +4,7 @@ var answer = '';
 var number = '';
 var error = false;
 var executed = false;
+var justExecuted = false;
 
 function addChar(char){
     if (operator == ''){
@@ -30,4 +31,5 @@ function reset(){
     answer = '';
     number = '';
     executed = false;
+    justExecuted = false;
 }

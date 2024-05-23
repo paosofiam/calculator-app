@@ -3,9 +3,8 @@ document.addEventListener("keyup", delkey);
 
 function delkey(e){// Backspace
     var key = ` ${e.keyCode}`; 
-    /* console.log('del1'+key); */
+    //console.log(key);
     if(key == 8){
-        /* console.log('del2'); */
         buttonDelete()
     }
 }
@@ -13,10 +12,13 @@ function delkey(e){// Backspace
 function getKey(e) {
     var key = ` ${e.keyCode}`;
     var char = '';
-    console.log(key);
+    //console.log(key);
     if (key >= 48 && key <= 57){// 0-9
         char = key-48;
         TheNumber(char);
+    }
+    else if(key == 46){// .
+        TheNumber('.');
     }
     else if (key == 13 || key == 61){// Intro or Equal
         buttonExecute();
