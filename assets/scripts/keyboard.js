@@ -13,25 +13,24 @@ function delkey(e){// Backspace
 function getKey(e) {
     var key = ` ${e.keyCode}`;
     var char = '';
+    console.log(key);
     if (key >= 48 && key <= 57){// 0-9
         char = key-48;
         TheNumber(char);
     }
-    else if(key == 13 || key == 61){// Intro or Equal
+    else if (key == 13 || key == 61){// Intro or Equal
         buttonExecute();
     }
-    else{
-        if(key == 42){// *
-            TheOperator('*');
-        }
-        else if(key == 43){// +
-            TheOperator('+');
-        }
-        else if(key == 45){// -
-            TheOperator('-');
-        }
-        else if(key == 47){// /
-            TheOperator('/');
-        }
+    else if (key == 42 || key == 120){// *
+        TheOperator('*');
+    }
+    else if(key == 43){// +
+        TheOperator('+');
+    }
+    else if(key == 45){// -
+        TheOperator('-');
+    }
+    else if(key == 47){// /
+        TheOperator('/');
     }
 }
