@@ -16,6 +16,7 @@ function TheOperator(key){
             addKey(key);
         }
         else if(operator != '' && number == ''){
+            justExecuted = false;
             buttonDelete();
             addKey(key);
         }
