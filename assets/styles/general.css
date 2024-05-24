@@ -14,7 +14,7 @@
 #themeTags{
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .themeTag{
     text-align: center;
@@ -41,9 +41,11 @@
 }
 .checkmark{
     position: absolute;
+    top: 4px;
+    left: 4px;
     display: block;
-    height: 20px;
-    width: 20px;
+    height: 12px;
+    width: 12px;
     border-radius: 10px;
     transition: background-color 100ms;
 }
@@ -58,8 +60,10 @@
 
 #screen{
     display: block;
+    font-size: 36px;
+    font-weight: var(--FW);
     width: 100%;
-    height: 60px;
+    height: 70px;
     background-color: var(--screenB);
     color: var(--textScreen);
     border-radius: var(--calcRadius);

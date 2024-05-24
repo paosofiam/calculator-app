@@ -13,7 +13,7 @@ function delkey(e){// Backspace
 function getKey(e) {
     var key = ` ${e.keyCode}`;
     var char = '';
-    console.log(key);
+    //console.log(key);
     if (key >= 48 && key <= 57){// 0-9
         char = key-48;
         activeKey('button'+char,'3');

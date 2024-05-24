@@ -7,15 +7,17 @@
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="/assets/styles/config.css">
   <link rel="stylesheet" href="/assets/styles/general.css">
+  <link rel="stylesheet" href="/assets/styles/mobile.css" media="screen and (max-width:720px)">
+  <link rel="stylesheet" href="/assets/styles/desktop.css" media="screen and (min-width:720px)">
   <title>Frontend Mentor | Calculator app</title>
 </head>
 <body id="calcApp" class="">
   <main id="calculator">
-    <div>
+    <div id="case">
       <div id="topCase">
         <h1>calc</h1>
         <div id="themeSwitch">
-          <span class="row2 column1">THEME</span>
+          <span id="themeTag" class="row2 column1">THEME</span>
           <div id="themeTags" class="row1 column2">
             <span class="themeTag">1</span>
             <span class="themeTag">2</span>

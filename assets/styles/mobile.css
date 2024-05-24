@@ -1,0 +1,29 @@
+#calculator{
+    padding: var(--gapSize);
+}
+#case{
+    height: 100%;
+    width: 100%;
+}
+
+#themeTag{
+    margin: auto 0;
+    font-size: 12px;
+}
+.themeTag{
+    height: 16px;
+    font-size: 12px;
+}
+
+
+#keyboard{
+    height: 70%;
+}
+#buttonExecute, .numButton{
+    font-size: var(--FS);
+    font-weight: var(--FW);
+}
+.commandButton{
+    font-size: 20px;
+    font-weight: var(--FW);
+}
