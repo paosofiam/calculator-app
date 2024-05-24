@@ -14,7 +14,7 @@ function savedTheme(){
 }
 
 function selectTheme(){
-    var selectedTheme = document.querySelector('input[name="themeSwitch"]:checked').value;
+    var selectedTheme = document.querySelector('input[name="themeSelect"]:checked').value;
     console.log("The color theme selected is : ",selectedTheme);
     changeTheme(selectedTheme);
 }

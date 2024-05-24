@@ -1,64 +1,83 @@
-/*Keyboard's Grid Layout*/
-#keyboard{
+
+#topCase{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#themeSwitch{
     display: grid;
-    grid-template-columns: repeat(4, 70px);
+    grid-template-columns: repeat(2, 1fr);
+}
+#themeTags{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.themeTag{
+    text-align: center;
+}
+#themeSelect{
+    height: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--toggleB);
+}
+
+.option{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+.switchOption{
+    position: relative;
+    opacity: 0;
+    height: 20px;
+    width: 20px;
+}
+.checkmark{
+    position: absolute;
+    display: block;
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    transition: background-color 100ms;
+}
+#checkmark1{background-color: var(--checkMark1); transition: background-color 100ms;}
+#checkmark2{background-color: var(--checkMark2); transition: background-color 100ms;}
+#checkmark3{background-color: var(--checkMark3); transition: background-color 100ms;}
+#checkmark1:active, #checkmark2:active, #checkmark3:active{
+    background-color: var(--AcheckMark);
+    transition: background-color 100ms;
+}
+
+
+#screen{
+    display: block;
+    width: 100%;
+    height: 60px;
+    background-color: var(--screenB);
+    color: var(--textScreen);
+    border-radius: var(--calcRadius);
+    margin: var(--gapSize) 0 calc(var(--gapSize)*.75) 0;
+    padding: var(--gapSize);
+    text-align: end;
+}
+
+#keyboard{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: var(--gapSize);
+    background-color: var(--keypadB);
+    border-radius: var(--calcRadius);
     padding: var(--gapSize);
 }
-/*#buttonReset{
-    grid-column: 1 / 3;
-    grid-row: 5;
-}
-#buttonExecute{
-    grid-column: 3 / 5;
-    grid-row: 5;
-}
-
-#buttonDelete{
-    grid-column: 4;
-    grid-row: 1;
-}
-#buttonPlus{
-    grid-column: 4;
-    grid-row: 2;
-}
-#buttonMinus{
-    grid-column: 4;
-    grid-row: 3;
-}
-#buttonMultiplied{
-    grid-column: 4;
-    grid-row: 4;
-}
-#buttonDivided{
-    grid-column: 3;
-    grid-row: 4;
-}
-#buttonDot{
-    grid-column: 1;
-    grid-row: 4;
-}
-
-#buttonZero{
-    grid-column: 2;
-    grid-row: 4;
-}
-#buttonOne, #buttonTwo, #buttonThree{
-    grid-row: 3;
-}
-#buttonFour, #buttonFive, #buttonSix{
-    grid-row: 2;
-}*/
-
-#buttonReset{
-    grid-column: 1 / 3;
-    grid-row: 5;
-}
-#buttonExecute{
-    grid-column: 3 / 5;
-    grid-row: 5;
-}
-
+/*Keyboard's Grid Layout*/
 .row1{grid-row: 1;}
 .row2{grid-row: 2;}
 .row3{grid-row: 3;}
@@ -67,33 +86,36 @@
 .column2{grid-column: 2;}
 .column3{grid-column: 3;}
 .column4{grid-column: 4;}
-
-#keyboard{
-    background-color: var(--keypadB);
-    border-radius: var(--calcRadius);
+#buttonReset{
+    grid-column: 1 / 3;
+    grid-row: 5;
 }
 
+#buttonExecute, .numButton, .commandButton{
+    border: none;
+    border-radius: var(--keyRadius);
+    cursor: pointer;
+}
 .numButton{
     background-color: var(--keyB3);
     color: var(--Text1);
-    border: none;
-    border-radius: var(--keyRadius);
     box-shadow: 0 var(--shadowLength) var(--keySh3);
 }
+.numButton:active{background-color: var(--activeColor3);}
 .commandButton{
     background-color: var(--keyB1);
-    color: var(--Text2);
-    border: none;
-    border-radius: var(--keyRadius);
+    color: var(--Text3);;
     box-shadow: 0 var(--shadowLength) var(--keySh1);
 }
+.commandButton:active{background-color: var(--activeColor1);}
 #buttonExecute{
+    grid-column: 3 / 5;
+    grid-row: 5;
     background-color: var(--keyB2);
     color: var(--Text2);
-    border: none;
-    border-radius: var(--keyRadius);
     box-shadow: 0 var(--shadowLength) var(--keySh2);
 }
+#buttonExecute:active{background-color: var(--activeColor2);}
 
 /*Feel free to remove these styles or customise in your own stylesheet 👍*/
 .attribution { font-size: 11px; text-align: center; }

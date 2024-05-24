@@ -36,7 +36,7 @@ function buttonExecute(){
             case '-':
             num=parseFloat(answer)-parseFloat(number);
             break;
-            case '*':
+            case 'x':
             num=parseFloat(answer)*parseFloat(number);
             break;
             case '/':

@@ -10,6 +10,8 @@
     --FS: 32px;
     --FW: 700;
     /*All colors*/
+        /*Transparent*/
+    --Transparent: hsla(0, 0%, 100%, 0);
         /*Theme 1*/
             /*Backgrounds*/
     --vDarkDesBlue1: hsl(222, 26%, 31%);
@@ -25,6 +27,10 @@
             /*Text*/
     --greyBlue: hsl(221, 14%, 31%);
     --white: hsl(0, 0%, 100%);
+            /*Active*/
+    --darkDesBlueActive: hsl(225, 21%, 59%);
+    --redActive: hsl(6, 63%, 60%);
+    --greyOrangeActive: hsl(30, 25%, 99%);
         /*Theme 2*/
             /*Backgrounds*/
     --lightGrey1: hsl(0, 0%, 90%);
@@ -39,6 +45,10 @@
     --greyYellow2: hsl(35, 11%, 61%);
             /*Text*/
     --dGreyYellow: hsl(60, 10%, 19%);
+            /*Active*/
+    --darkCyanActive: hsl(185, 42%, 47%);
+    --orangeActive: hsl(25, 98%, 50%);
+    --greyYellowActive: hsl(45, 7%, 99%);
         /*Theme 3*/
             /*Backgrounds*/
     --vDarkViolet1: hsl(268, 75%, 9%);
@@ -53,7 +63,11 @@
             /*Text*/
     --yellow: hsl(52, 100%, 62%);
     --vDarkBlue: hsl(198, 20%, 13%);
-        /*Dimensions*/
+            /*Active*/
+    --violetActive: hsl(281, 89%, 36%);
+    --cyanActive: hsl(176, 100%, 54%);
+    --darkVioletActive: hsl(268, 47%, 31%);
+    /*Dimensions*/
     --shadowLength: 3px;
     --keyRadius: 5px;
     --gapSize: 20px;
@@ -74,10 +88,21 @@
     --keySh2: var(--red2);
     --keyB3: var(--greyOrange1);
     --keySh3: var(--greyOrange2);
+    /*Theme Switch*/
+    --AcheckMark: var(--redActive);
+    --checkMark1: var(--keyB2);
+    --checkMark2: var(--Transparent);
+    --checkMark3: var(--Transparent);
     /*Text*/
     --Text1: var(--greyBlue);
     --Text2: var(--white);
     --Text3: var(--white);
+    /*Active*/
+    --activeColor1: var(--darkDesBlueActive);
+    --activeColor2: var(--redActive);
+    --activeColor3: var(--greyOrangeActive);
+    /*Screen Text*/
+    --textScreen: var(--white);
 }
 .theme-2{/*Theme 2*/
     /*Backgrounds*/
@@ -93,10 +118,21 @@
     --keySh2: var(--orange2);
     --keyB3: var(--greyYellow1);
     --keySh3: var(--greyYellow2);
+    /*Theme Switch*/
+    --AcheckMark: var(--orangeActive);
+    --checkMark1: var(--Transparent);
+    --checkMark2: var(--keyB2);
+    --checkMark3: var(--Transparent);
     /*Text*/
     --Text1: var(--dGreyYellow);
     --Text2: var(--white);
     --Text3: var(--white);
+    /*Active*/
+    --activeColor1: var(--darkCyanActive);
+    --activeColor2: var(--orangeActive);
+    --activeColor3: var(--greyYellowActive);
+    /*Screen Text*/
+    --textScreen: var(--dGreyYellow);
 }
 .theme-3{/*Theme 3*/
     /*Backgrounds*/
@@ -112,15 +148,32 @@
     --keySh2: var(--cyan2);
     --keyB3: var(--darkViolet1);
     --keySh3: var(--darkViolet2);
+    /*Theme Switch*/
+    --AcheckMark: var(--cyanActive);
+    --checkMark1: var(--Transparent);
+    --checkMark2: var(--Transparent);
+    --checkMark3: var(--keyB2);
     /*Text*/
     --Text1: var(--yellow);
     --Text2: var(--vDarkBlue);
     --Text3: var(--white);
+    /*Active*/
+    --activeColor1: var(--violetActive);
+    --activeColor2: var(--cyanActive);
+    --activeColor3: var(--darkVioletActive);
+    /*Screen Text*/
+    --textScreen: var(--yellow);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body{
-    margin: 0;
-    padding: 0;
+    display: flex;
+    flex-direction: column;
 }
 main{
     height: 100vh;
@@ -129,16 +182,20 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: var(--mainB);
+}
+footer{
+    position: absolute;
+    bottom: 0;
 }
 
-#calculator{
-    height: 80%;
-    width: 30%;
+h1,span{
+    color: var(--textScreen);
+    font-family: var(--FF);
 }
-
 button{
     font-family: var(--FF);
-    font-size: var(--FS);
-    font-weight: var(--FW);
+    /*font-size: var(--FS);
+    font-weight: var(--FW);*/
     text-align: center;
 }
