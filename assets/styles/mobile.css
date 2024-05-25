@@ -7,7 +7,7 @@
 }
 
 #keyboard{
-    height: 70%;
+    height: 60%;
 }
 #buttonExecute, .numButton{
     font-size: var(--FS);
