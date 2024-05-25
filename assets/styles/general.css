@@ -26,9 +26,9 @@
     font-size: 18px;
 }
 #themeSelect{
-    height: 28px;
-    width: 84px;
-    border-radius: 14px;
+    height: 32px;
+    width: 100px;
+    border-radius: 16px;
     display: flex;
     justify-content: space-between;
     background-color: var(--toggleB);
@@ -43,17 +43,17 @@
 .switchOption{
     position: relative;
     opacity: 0;
-    height: 28px;
-    width: 28px;
+    height: 32px;
+    width: 32px;
 }
 .checkmark{
     position: absolute;
     top: 4px;
     left: 4px;
     display: block;
-    height: 20px;
-    width: 20px;
-    border-radius: 10px;
+    height: 24px;
+    width: 24px;
+    border-radius: 12px;
     transition: background-color 100ms;
 }
 #checkmark1{background-color: var(--checkMark1); transition: background-color 100ms;}
