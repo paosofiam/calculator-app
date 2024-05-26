@@ -15,6 +15,17 @@ function addChar(char){
     }
 }
 
+function ifDot(){
+    var Dot = false;
+    if(operator == ''){
+        Dot = answer.includes('.');
+    }
+    else{
+        Dot = number.includes('.');
+    }
+    return Dot;
+}
+
 function addKey(key){
     screen += key;
     operator = key;
@@ -22,6 +33,9 @@ function addKey(key){
 }
 
 function printScreen(){
+    if(screen.length > 22){
+        screen = screen.slice(1);
+    }
     document.getElementById('screen').innerHTML = screen;
 }
 

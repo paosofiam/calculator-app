@@ -1,12 +1,18 @@
 /*When a Number button is pressed*/
 function TheNumber(key){
+    var dot = false;
     if(error || (executed && operator == '')){
         buttonReset();
     }
-    addChar(key);
-    justExecuted = false;
-    screen += key;
-    printScreen();
+    if(key == '.'){
+        dot = ifDot();
+    }
+    if(!dot){
+        addChar(key);
+        justExecuted = false;
+        screen += key;
+        printScreen();
+    }
 }
 /*When an Operator button is pressed*/
 function TheOperator(key){
