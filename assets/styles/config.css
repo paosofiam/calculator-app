@@ -77,9 +77,9 @@
     --mSwitch: 24px;
     --dSwitch: 20px;
     --mToggleMargin: 4px;
-    --dToggleMargin: 2px;
+    --dToggleMargin: 4px;
     --mToggleHeight: 32px;
-    --dToggleHeight: 24px;
+    --dToggleHeight: 28px;
     --mToggleWidth: 100px;
     --dToggleWidth: 80;
 }

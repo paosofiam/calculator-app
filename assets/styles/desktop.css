@@ -4,12 +4,11 @@
 #case{
     height: 80%;
     width: 35%;
-    min-height: 70px;
 }
 
 #screen{
-
     height: 10%;
+    min-height: 70px;
 }
 
 
