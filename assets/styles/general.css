@@ -18,17 +18,12 @@
 }
 .themeTag{
     height: 20px;
-    font-size: 18px;
     text-align: center;
 }
 #themeTag{
     margin: auto 0;
-    font-size: 18px;
 }
 #themeSelect{
-    height: 32px;
-    width: 100px;
-    border-radius: 16px;
     display: flex;
     justify-content: space-between;
     background-color: var(--toggleB);
@@ -43,17 +38,10 @@
 .switchOption{
     position: relative;
     opacity: 0;
-    height: 32px;
-    width: 32px;
 }
 .checkmark{
     position: absolute;
-    top: 4px;
-    left: 4px;
     display: block;
-    height: 24px;
-    width: 24px;
-    border-radius: 12px;
     transition: background-color 100ms;
 }
 #checkmark1{background-color: var(--checkMark1); transition: background-color 100ms;}

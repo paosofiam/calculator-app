@@ -6,6 +6,30 @@
     width: 100%;
 }
 
+
+.themeTag{
+    font-size: var(--mTagFS);
+}
+#themeTag{
+    font-size: var(--mTagFS);
+}
+#themeSelect{
+    height: var(--mToggleHeight);
+    width: var(--mToggleWidth);
+    border-radius: calc(var(--mToggleHeight)/2);
+}
+.switchOption{
+    height: var(--mToggleHeight);
+    width: var(--mToggleHeight);
+}
+.checkmark{
+    top: var(--mToggleMargin);
+    left: var(--mToggleMargin);
+    height: var(--mSwitch);
+    width: var(--mSwitch);
+    border-radius: calc(var(--mSwitch)/2);
+}
+
 #keyboard{
     height: 60%;
 }

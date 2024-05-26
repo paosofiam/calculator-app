@@ -72,6 +72,16 @@
     --keyRadius: 5px;
     --gapSize: 20px;
     --calcRadius: 10px;
+    --mTagFS: 18px;
+    --dTagFS: 14px;
+    --mSwitch: 24px;
+    --dSwitch: 20px;
+    --mToggleMargin: 4px;
+    --dToggleMargin: 2px;
+    --mToggleHeight: 32px;
+    --dToggleHeight: 24px;
+    --mToggleWidth: 100px;
+    --dToggleWidth: 80;
 }
     /*Color Themes*/
 :root{/*Template & Theme 1*/

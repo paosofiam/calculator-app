@@ -1,0 +1,49 @@
+#calculator{
+    padding: 0;
+}
+#case{
+    height: 80%;
+    width: 35%;
+    min-height: 70px;
+}
+
+#screen{
+
+    height: 10%;
+}
+
+
+.themeTag{
+    font-size: var(--dTagFS);
+}
+#themeTag{
+    font-size: var(--dTagFS);
+}
+#themeSelect{
+    height: var(--dToggleHeight);
+    width: var(--dToggleWidth);
+    border-radius: calc(var(--dToggleHeight)/2);
+}
+.switchOption{
+    height: var(--dToggleHeight);
+    width: var(--dToggleHeight);
+}
+.checkmark{
+    top: var(--dToggleMargin);
+    left: var(--dToggleMargin);
+    height: var(--dSwitch);
+    width: var(--dSwitch);
+    border-radius: calc(var(--dSwitch)/2);
+}
+
+#keyboard{
+    height: 70%;
+}
+#buttonExecute, .numButton{
+    font-size: var(--FS);
+    font-weight: var(--FW);
+}
+.commandButton{
+    font-size: 20px;
+    font-weight: var(--FW);
+}
