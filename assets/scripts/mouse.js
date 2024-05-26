@@ -56,12 +56,13 @@ function buttonExecute(){
             break;
             default:
                 error = true;
-        }
+        } 
         if(error){
             answer = '';
             screen = 'error';
         }
         else{
+            //num = Math.round10(num, -5);
             answer = num.toString();
             screen = answer;
             number = '';
