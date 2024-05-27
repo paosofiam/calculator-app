@@ -62,9 +62,9 @@ function buttonExecute(){
             screen = 'error';
         }
         else{
-            //num = Math.round10(num, -5);
             answer = num.toString();
             screen = answer;
+            screen = roundPrecision(screen, 5);
             number = '';
         }
         operator = '';

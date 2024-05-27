@@ -46,3 +46,9 @@
     font-size: 20px;
     font-weight: var(--FW);
 }
+
+@media only screen and (max-height: 500px) {
+    main{
+        height: 70vw;
+    }
+}
