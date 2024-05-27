@@ -27,15 +27,27 @@ function ifDot(){
 }
 
 function addKey(key){
-    screen += key;
+    theScreen += key;
     operator = key;
     printScreen();
 }
 
 function printScreen(){
-    var maxChar = 21;
-    if(screen.width < 720){
-        maxChar = 16;
+    var maxChar = 25;
+    if(screen.width <= 375){
+        maxChar = Math.floor(screen.width*.0375);
+    }
+    else if(screen.width <= 500 && screen.width > 375){
+        maxChar = Math.floor(screen.width*.03989);
+    }
+    else if(screen.width < 720 && screen.width > 500){
+        maxChar = Math.floor(screen.width*.04192);
+    }
+    else if(screen.width <= 800 && screen.width >= 720){
+        maxChar = 11;
+    }
+    else if(screen.width <= 1600 && screen.width > 800){
+        maxChar = Math.floor(screen.width*.016);
     }
     var excess = theScreen.length - maxChar
     if(excess > 0){
@@ -62,8 +74,21 @@ function roundPrecision(string, precision){
                 number[2] = number[1].slice(precision);
                 number[1] = number[1].slice(0,precision);
                 if(number[2] >= 5){//Decides to seal or floor round the number
+                    var zeros = 0;
+                    for(var i = 0; i < 5; i++){//Delete al zeros at the end of the number
+                        if(number[1].slice(0,1) == '0'){
+                            number[1] = number[1].slice(1);
+                            zeros++;
+                        }
+                        else{
+                            break
+                        }
+                    }
                     number[1] = parseInt(number[1])+1;//If condition is true we seal round the number
                     number[1] = number[1].toString();
+                    for(var i = 0; i < zeros; i++){//Delete al zeros at the end of the number
+                        number[1] = '0'+number[1];
+                    }
                 }
             }
             for(var i = 5; i > 0; i--){//Delete al zeros at the end of the number
