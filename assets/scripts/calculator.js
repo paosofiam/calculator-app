@@ -73,9 +73,9 @@ function roundPrecision(string, precision){
                 number[1] = number[1].slice(0,precision+1);
                 number[2] = number[1].slice(precision);
                 number[1] = number[1].slice(0,precision);
-                if(number[2] >= 5){//Decides to seal or floor round the number
+                if(number[2] >= precision){//Decides to seal or floor round the number
                     var zeros = 0;
-                    for(var i = 0; i < 5; i++){//Delete al zeros at the end of the number
+                    for(var i = 0; i < precision; i++){//Delete al zeros at the end of the number
                         if(number[1].slice(0,1) == '0'){
                             number[1] = number[1].slice(1);
                             zeros++;
@@ -91,7 +91,7 @@ function roundPrecision(string, precision){
                     }
                 }
             }
-            for(var i = 5; i > 0; i--){//Delete al zeros at the end of the number
+            for(var i = precision; i > 0; i--){//Delete al zeros at the end of the number
                 if(number[1].slice(i-1) == '0'){
                     number[1] = number[1].slice(0,i-1);
                 }
