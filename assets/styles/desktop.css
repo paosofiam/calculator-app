@@ -48,8 +48,11 @@
 }
 
 @media only screen and (max-height: 500px) {
-    /*main{
+    main{
         height: 70vw;
-    }*/
-    
+    }
+
+    #case{
+        width: 60%;
+    }
 }
