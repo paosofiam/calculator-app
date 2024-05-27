@@ -1,4 +1,4 @@
-var screen = '';
+var theScreen = '';
 var operator = '';
 var answer = '';
 var number = '';
@@ -33,15 +33,19 @@ function addKey(key){
 }
 
 function printScreen(){
-    var excess = screen.length - 21
-    if(excess > 0){
-        screen = screen.slice(excess);
+    var maxChar = 21;
+    if(screen.width < 720){
+        maxChar = 16;
     }
-    document.getElementById('screen').innerHTML = screen;
+    var excess = theScreen.length - maxChar
+    if(excess > 0){
+        theScreen = theScreen.slice(excess);
+    }
+    document.getElementById('screen').innerHTML = theScreen;
 }
 
 function reset(){
-    screen = '';
+    theScreen = '';
     operator = '';
     answer = '';
     number = '';

@@ -10,7 +10,7 @@ function TheNumber(key){
     if(!dot){
         addChar(key);
         justExecuted = false;
-        screen += key;
+        theScreen += key;
         printScreen();
     }
 }
@@ -59,12 +59,12 @@ function buttonExecute(){
         } 
         if(error){
             answer = '';
-            screen = 'error';
+            theScreen = 'error';
         }
         else{
             answer = num.toString();
-            screen = answer;
-            screen = roundPrecision(screen, 5);
+            theScreen = answer;
+            theScreen = roundPrecision(theScreen, 5);
             number = '';
         }
         operator = '';
@@ -81,15 +81,15 @@ function buttonDelete(){
     else{
         if (answer != '' && operator == '' && number == '' && !executed){
             answer = answer.slice(0, -1);
-            screen = screen.slice(0, -1);  
+            theScreen = theScreen.slice(0, -1);  
         }
         else if (answer != '' && operator != '' && number == ''){
             operator = '';
-            screen = screen.slice(0, -1);
+            theScreen = theScreen.slice(0, -1);
         }
         else if (answer != '' && operator != '' && number != ''){
             number = number.slice(0, -1);
-            screen = screen.slice(0, -1);
+            theScreen = theScreen.slice(0, -1);
         }
         printScreen();
     }
