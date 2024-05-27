@@ -44,7 +44,7 @@
 
 @media only screen and (max-height: 500px) {
     main{
-        height: 70vw;
+        height: 80vw;
     }
 
     #case{
